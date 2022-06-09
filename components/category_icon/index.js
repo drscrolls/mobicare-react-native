@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { Button, Card, Icon, Image } from 'react-native-elements'
+import { SvgUri } from 'react-native-svg';
 
 const CategoryIcon = (props) => {
-    // const image = props.image; 
     const image = props.image;
 
     return (
       <>
         <View style={styles.container}>
-            <Image
-              source={{ uri: image }}
-              style={styles.image}
+            <SvgUri
+              uri={image}
+              fill='white'
+              width={25}
+              height={25}
             />
         </View>
       </>

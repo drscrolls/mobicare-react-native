@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, ActivityIndicator } from 'react-native'
 import { Button, Card, Icon, Image } from 'react-native-elements'
 import CategoryIcon from '../category_icon';
 
-const ImageBanner = ({category}) => {
+const ImageBanner = () => {
 
   return (
       <>
         <Image 
-          source={{uri : require('../../assets/banner.png'), scale: 1}}
-          containerStyle={styles.container} />
+          source={{uri : 'https://www.ems-usa.com/wp-content/uploads/2015/05/placeholder-banner.jpg'}}
+          containerStyle={styles.container}
+          PlaceholderContent={<ActivityIndicator />} />
       </>
     );
     

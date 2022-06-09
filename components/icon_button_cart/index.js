@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { Button, Card, Icon, Image, Badge } from 'react-native-elements'
+import { SvgUri } from 'react-native-svg';
 
-const IconButtonCart = (props) => {
-    const icon = props.icon ?? "https://www.svgrepo.com/show/352445/shopping-basket.svg";
-    const counter = props.counter ?? true;
+const IconButtonCart = () => {
 
-    return (
+  return (
       <>
         <View style={[styles.container]}>
-            <Image
-              source={{ uri: icon }}
-              style={styles.image}
+            <SvgUri
+              uri={"https://www.svgrepo.com/show/352445/shopping-basket.svg"}
+              fill={"rgb(42, 89, 189)"}
+              width={18} 
+              height={18} 
             />
             <Badge 
               containerStyle={styles.badgeContainer} 

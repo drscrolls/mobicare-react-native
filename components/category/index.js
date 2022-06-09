@@ -5,8 +5,7 @@ import CategoryIcon from '../category_icon';
 
 const Category = ({category}) => {
 
-    const title = category.item.title;
-    const image = category.item.image;
+    const {title, image } = category.item;
 
     return (
       <>

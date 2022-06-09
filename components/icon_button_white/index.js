@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { Button, Card, Icon, Image } from 'react-native-elements'
+import { SvgUri } from 'react-native-svg';
 
 const IconButtonWhite = (props) => {
     // const image = props.image; 
@@ -8,10 +9,13 @@ const IconButtonWhite = (props) => {
 
     return (
       <>
-        <View style={[styles.container, {alignSelf: 'left'}]}>
-            <Image
-              source={{ uri: "https://www.svgrepo.com/show/309665/grid.svg" }}
+        <View style={[styles.container]}>
+            <SvgUri
+              uri={"https://www.svgrepo.com/show/309665/grid.svg"}
               style={styles.image}
+              width={20}
+              height={20}
+              fill="#777"
             />
         </View>
       </>
@@ -21,8 +25,8 @@ const IconButtonWhite = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: 'rgba(227, 226, 226, 0.2)',
-      alignItems: 'center',
+      backgroundColor: 'rgba(227, 226, 226, 0.4)',
+      // alignItems: 'left',
       justifyContent: 'center',
       borderRadius: 10,
       width: 37, 

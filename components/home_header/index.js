@@ -9,17 +9,18 @@ import IconButtonCart from '../icon_button_cart'
 const HomeHeader = () => {
   
     return (
-        <>
+        <View>
             <Header 
                 backgroundColor='white'
                 barStyle={{backgroundColor: 'white', color: '#000'}}
-                containerStyle={{borderWidth: 0, borderColor: 'white'}}
+                // containerStyle={{borderWidth: 0, borderColor: 'white'}}
                 leftComponent={<IconButtonWhite />}
                 // centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
                 rightComponent={<IconButtonCart />}
-                leftContainerStyle={{alignSelf: 'left'}}
+                // leftContainerStyle={{alignSelf: 'left'}}
+                containerStyle={{ borderBottomColor:'#fff',borderBottomWidth:1 }}
             />
-        </>
+        </View>
     )
 }
 

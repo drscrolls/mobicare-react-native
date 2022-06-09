@@ -7,6 +7,7 @@ export default function App() {
   return (
     <SafeAreaProvider style={styles.container}>
       <HomeScreen />
+      <StatusBar />
     </SafeAreaProvider>
   );
 }

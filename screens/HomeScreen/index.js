@@ -10,8 +10,9 @@ const HomeScreen = (props) => {
 
     return (
       <View style={styles.container}>
+        {/* <Text>Hello</Text> */}
         <HomeHeader />
-        <HomeSearch />
+         <HomeSearch />
         <CategoriesList />
         <ImageBanner />
         <ItemsHorizontalList />

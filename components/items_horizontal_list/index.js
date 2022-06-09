@@ -28,7 +28,7 @@ const items = [
     
   ];
 
-const ItemsHorizontalList = (props) => {
+const ItemsHorizontalList = () => {
   
     return (
         <View style={styles.container}>
