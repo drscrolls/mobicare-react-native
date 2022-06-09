@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     icon: {
       alignItems: 'center',
       justifyContent: 'center',
+      backgroundColor: '#2a59bd'
     }
   });
   

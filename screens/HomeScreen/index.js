@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet} from 'react-native';
-import HomeContent from '../../components/home_content';
+import CategoriesList from '../../components/categories_list';
 import HomeHeader from '../../components/home_header';
 import HomeSearch from '../../components/home_search';
+import ImageBanner from '../../components/image_banner';
+import ItemsHorizontalList from '../../components/items_horizontal_list';
 
 const HomeScreen = (props) => {
 
@@ -10,7 +12,9 @@ const HomeScreen = (props) => {
       <View style={styles.container}>
         <HomeHeader />
         <HomeSearch />
-        <HomeContent />
+        <CategoriesList />
+        <ImageBanner />
+        <ItemsHorizontalList />
       </View>
     );
 }

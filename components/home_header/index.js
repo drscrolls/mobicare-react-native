@@ -3,6 +3,7 @@ import { Text, View, StyleSheet } from 'react-native'
 import { Header } from 'react-native-elements'
 import IconButtonWhite from '../icon_button_white'
 import IconButtonBlue from '../icon_button_blue'
+import IconButtonCart from '../icon_button_cart'
 
 
 const HomeHeader = () => {
@@ -15,7 +16,7 @@ const HomeHeader = () => {
                 containerStyle={{borderWidth: 0, borderColor: 'white'}}
                 leftComponent={<IconButtonWhite />}
                 // centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
-                rightComponent={<IconButtonBlue />}
+                rightComponent={<IconButtonCart />}
                 leftContainerStyle={{alignSelf: 'left'}}
             />
         </>

@@ -26,11 +26,11 @@ const categories = [
     }
   ];
 
-const HomeContent = (props) => {
+const CategoriesList = (props) => {
   
     return (
         <View style={styles.container}>
-            
+            <Text style={styles.title}>Categories</Text>
             <FlatList 
                 data={categories} 
                 horizontal={true}
@@ -42,7 +42,14 @@ const HomeContent = (props) => {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
+    },
+    title: {
+      fontSize: 12,
+      paddingTop: 15,
+      paddingHorizontal: 10,
+      fontWeight: '600',
+      color: '#333'
     }
 });
 
-export default HomeContent;
+export default CategoriesList;

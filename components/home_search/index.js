@@ -36,7 +36,9 @@ export default class HomeSearch extends React.Component {
 
 const styles = StyleSheet.create({
     searchContainer:{
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
+        borderColor: '#fff',
+        borderWidth: 0
     },  
     container : {
         backgroundColor: "#fff", 
@@ -47,8 +49,9 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     header: {
-        fontSize: 20,
-        fontWeight: '400',
-        marginVertical: 10
+        fontSize: 18,
+        fontWeight: '500',
+        marginVertical: 10,
+        color: '#333'
     }
 });
