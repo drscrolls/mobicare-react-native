@@ -6,12 +6,14 @@ import IconButtonBlue from '../icon_button_blue';
 
 const ItemHorizontal = ({category}) => {
 
-    const {title, image, price} = category.item;
+    const {title, price} = category.item;
+    const image = category.item.image ;
 
+    // console.log("image", image);
     return (
       <View style={styles.container}>
         <Image 
-          source={{uri : image}}
+          source={{uri : image }}
           containerStyle={styles.image} />
         <View style={styles.textContainer}>
           <Text style={styles.title}>{title}</Text>
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
       fontWeight: '600',
       marginLeft: 10,
       position: 'absolute',
-      bottom: 3
+      bottom: 5
     },
     image: {
       height: 70,

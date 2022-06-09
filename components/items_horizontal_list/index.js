@@ -34,6 +34,7 @@ const ItemsHorizontalList = () => {
         <View style={styles.container}>
             <Text style={styles.title}>Bestsellers</Text>
             <FlatList 
+                scrollEnabled={false}
                 data={items} 
                 renderItem={(item) => <ItemHorizontal category={item} />}  />
         </View>
@@ -42,7 +43,6 @@ const ItemsHorizontalList = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         marginHorizontal: 10
     },
     title: {

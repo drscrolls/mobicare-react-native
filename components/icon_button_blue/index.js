@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { Button, Card, Icon, Image, Badge } from 'react-native-elements'
+import { SvgUri } from 'react-native-svg';
 
 const IconButtonBlue = (props) => {
     const icon = props.icon ?? "https://www.svgrepo.com/show/352445/shopping-basket.svg";
@@ -9,9 +10,11 @@ const IconButtonBlue = (props) => {
     return (
       <>
         <View style={[styles.container]}>
-            <Image
-              source={{ uri: icon }}
-              style={styles.image}
+            <SvgUri
+              uri={icon}
+              fill="rgb(42, 89, 189)"
+              width={15}
+              height={15}
             />
         </View>
       </>

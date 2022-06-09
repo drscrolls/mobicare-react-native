@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet, ScrollView} from 'react-native';
 import CategoriesList from '../../components/categories_list';
 import HomeHeader from '../../components/home_header';
 import HomeSearch from '../../components/home_search';
@@ -10,12 +10,21 @@ const HomeScreen = (props) => {
 
     return (
       <View style={styles.container}>
-        {/* <Text>Hello</Text> */}
-        <HomeHeader />
-         <HomeSearch />
-        <CategoriesList />
-        <ImageBanner />
-        <ItemsHorizontalList />
+        <ScrollView
+          alwaysBounceVertical={true}
+          stickyHeaderIndices={[0]}
+          showsVerticalScrollIndicator={false}
+          >
+              <HomeHeader />
+              <HomeSearch />
+              <CategoriesList />
+              <ImageBanner />
+              <View>
+                <ItemsHorizontalList />
+              </View>
+
+        </ScrollView>
+            
       </View>
     );
 }

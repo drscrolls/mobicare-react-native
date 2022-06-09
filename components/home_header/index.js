@@ -13,6 +13,7 @@ const HomeHeader = () => {
             <Header 
                 backgroundColor='white'
                 barStyle={{backgroundColor: 'white', color: '#000'}}
+                // barStyle="light-content" // or directly
                 // containerStyle={{borderWidth: 0, borderColor: 'white'}}
                 leftComponent={<IconButtonWhite />}
                 // centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
