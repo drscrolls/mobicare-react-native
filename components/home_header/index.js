@@ -1,29 +1,26 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { Header } from 'react-native-elements'
+import IconButtonWhite from '../icon_button_white'
+import IconButtonBlue from '../icon_button_blue'
 
 
 const HomeHeader = () => {
   
     return (
-        <View>
-         <Header
-            statusBarProps={{ barStyle: 'light-content' }}
-            barStyle={"light-content"} // or directly
-            // leftComponent={<MyCustomLeftComponent />}
-            centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
-            containerStyle={{
-                backgroundColor: '#3D6DCC',
-                justifyContent: 'space-around',
-            }}
+        <>
+            <Header 
+                backgroundColor='white'
+                barStyle={{backgroundColor: 'white', color: '#000'}}
+                containerStyle={{borderWidth: 0, borderColor: 'white'}}
+                leftComponent={<IconButtonWhite />}
+                // centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+                rightComponent={<IconButtonBlue />}
+                leftContainerStyle={{alignSelf: 'left'}}
             />
-        </View>
+        </>
     )
 }
-
-const styles = StyleSheet.create({
-
-})
 
 
 export default HomeHeader;
