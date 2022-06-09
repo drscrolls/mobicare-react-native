@@ -6,23 +6,23 @@ import ItemHorizontal from '../item_horizontal';
 
 const items = [
     {
-      title: 'Paracetamol',
+      title: 'Paracetamol 250mg Suppositories',
       price: 2.65,
-      image: "https://julitetpharmacy.com/wp-content/uploads/2021/02/PARA-UK.jpg"
+      image: "https://www.typharm.com/wp-content/uploads/2020/07/Paracetamol-250mg-Suppositories.png"
     },
     {
-      title: 'Paracetamol',
-      price: 2.65,
-      image: "https://julitetpharmacy.com/wp-content/uploads/2021/02/PARA-UK.jpg"
+      title: 'Gebedol Forte Tablets',
+      price: 10.00,
+      image: "https://countrymedicalpharmacy.com/wp-content/uploads/2020/11/Gebedol-Forte_Tablets.jpg"
     },
     {
-      title: 'Paracetamol',
-      price: 2.65,
-      image: "https://julitetpharmacy.com/wp-content/uploads/2021/02/PARA-UK.jpg"
+      title: 'Enafen Ibuprofen Brufen 400mg',
+      price: 20.00,
+      image: "https://countrymedicalpharmacy.com/wp-content/uploads/2020/10/Enafen-Ibuprofen-Brufen-400-MG.jpg"
     },
     {
-      title: 'Paracetamol',
-      price: 2.65,
+      title: 'Paracetamol Caplets 500mg',
+      price: 5.99,
       image: "https://julitetpharmacy.com/wp-content/uploads/2021/02/PARA-UK.jpg"
     },
     

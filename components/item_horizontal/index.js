@@ -6,17 +6,16 @@ import IconButtonBlue from '../icon_button_blue';
 
 const ItemHorizontal = ({category}) => {
 
-    const title = category.item.title;
-    const image = category.item.image;
+    const {title, image, price} = category.item;
 
     return (
       <View style={styles.container}>
         <Image 
-          source={{uri : require('../../assets/para.png')}}
+          source={{uri : image}}
           containerStyle={styles.image} />
-        <View containerStyle={styles.textContainer}>
-          <Text style={styles.title}>Paracetamol 250mg Suppositories</Text>
-          <Text style={styles.price}>GHS 12.00</Text>
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.price}>GHS {price}</Text>
         </View>
         <View style={{justifyContent: 'center'}}>
           <IconButtonBlue />
@@ -26,17 +25,20 @@ const ItemHorizontal = ({category}) => {
     
 }
 
-const width_proportion = '50%';
 const styles = StyleSheet.create({
     container: {
       justifyContent: 'flex-start',
       flexDirection: 'row',
       marginBottom: 10,
-      // flex: 1
+      display: 'flex',
+      flex: 1,
+      width: '100%'
     },
     textContainer: {
       flexDirection: 'column',
       borderWidth: 0,
+      paddingRight: 50,
+      flex: 0.85
     },
     title :{
       color: '#555',
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
       fontWeight: '500',
       marginLeft: 10,
       paddingTop: 2,
-      width: '90%'
+      // width: '90%'
     },
     price :{
       // color: 'rgb(80, 117, 221)',
