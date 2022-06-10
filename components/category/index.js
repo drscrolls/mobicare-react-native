@@ -1,21 +1,29 @@
-import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import React, { Component, useState } from 'react'
+import { Text, View, StyleSheet, Pressable } from 'react-native'
 import { Button, Card, Icon, Image } from 'react-native-elements'
 import CategoryIcon from '../category_icon';
 
 const Category = ({category}) => {
 
     const {title, image } = category.item;
+    const [Pressed, setPressed] = useState(0);
 
     return (
-      <>
-        <Card containerStyle={styles.card}>
+      <Pressable 
+          onPress={() => {
+            setPressed();
+          }}
+          style={({ pressed }) => [
+            {
+              backgroundColor: pressed ? '#15326f' : '#2a59bd',
+            },
+            styles.card,
+          ]}>
           <CategoryIcon style={styles.icon} image={image}/>
           <Text style={styles.title}>
             {title}
           </Text>
-        </Card>
-      </>
+        </Pressable>
     );
     
 }
@@ -31,7 +39,7 @@ const styles = StyleSheet.create({
       borderWidth: 3,
     },
     card: {
-      backgroundColor: '#2a59bd',
+      // backgroundColor: '#2a59bd',
       borderWidth: 0, 
       alignItems: 'center',
       alignSelf: 'center',

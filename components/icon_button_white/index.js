@@ -10,7 +10,7 @@ const IconButtonWhite = (props) => {
     return (
         <Pressable 
           onPress={() => {
-            setTimesPressed();
+            setPressed();
           }}
           style={({ pressed }) => [
             {
@@ -32,7 +32,6 @@ const IconButtonWhite = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: 'rgba(227, 226, 226, 0.4)',
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 10,
