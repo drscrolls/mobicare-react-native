@@ -11,6 +11,7 @@ const IconButtonWhite = (props) => {
         <Pressable 
           onPress={() => {
             setPressed();
+            alert("hello");
           }}
           style={({ pressed }) => [
             {
