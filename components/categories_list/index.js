@@ -6,23 +6,23 @@ import Category from '../category';
 const categories = [
     {
       title: 'Vitamins',
-      image: "https://im2.ezgif.com/tmp/ezgif-2-1a442f6709.png"
+      image: "https://img.icons8.com/ios/344/pill.png"
     },
     {
       title: 'Herbal',
-      image: "https://im2.ezgif.com/tmp/ezgif-2-9589ef2709.png"
+      image: "https://img.icons8.com/ios/344/herbal-medicine.png"
     },
     {
       title: 'Dental',
-      image: "https://im2.ezgif.com/tmp/ezgif-2-5651dac875.png"
+      image: "https://img.icons8.com/ios/344/tooth.png"
     },
     {
       title: 'Skincare',
-      image: "https://im2.ezgif.com/tmp/ezgif-2-8a41db98e8.png"
+      image: "https://img.icons8.com/ios/344/antiseptic-cream.png"
     },
     {
       title: 'Hair',
-      image: "https://im2.ezgif.com/tmp/ezgif-2-58f4e70fc9.png"
+      image: "https://img.icons8.com/ios/344/eyelash.png"
     }
   ];
 

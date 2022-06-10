@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView} from 'react-native';
-import ItemDetailsHeader from '../../components/item_details_header';
+import HomeHeader from '../../components/home_header';
+import ImageCarousel from '../../components/image_carousel';
+import ItemPageHeader from '../../components/itempage_header';
 
 
-const ItemDetailsScreen = (props) => {
+
+const ItemPageScreen = (props) => {
 
     return (
       <View style={styles.container}>
-        <ScrollView
+        <ItemPageHeader />
+        {/* <ImageCarousel /> */}
+        {/* <ScrollView
           alwaysBounceVertical={true}
           stickyHeaderIndices={[0]}
           showsVerticalScrollIndicator={false}>
               
-              <ItemDetailsHeader />
 
-        </ScrollView>
-            
+        </ScrollView> */}
+             
       </View>
     );
 }
@@ -27,4 +31,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default ItemDetailsScreen;
+export default ItemPageScreen;

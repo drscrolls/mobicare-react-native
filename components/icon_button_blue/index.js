@@ -4,7 +4,7 @@ import { Button, Card, Icon, Image, Badge } from 'react-native-elements'
 import { SvgUri } from 'react-native-svg';
 
 const IconButtonBlue = (props) => {
-    const icon = props.icon ?? "https://im2.ezgif.com/tmp/ezgif-2-0021147349.png";
+    const icon = props.icon ?? "https://img.icons8.com/ios-glyphs/344/shopping-basket.png";
 
     return (
       <>

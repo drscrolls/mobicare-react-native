@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { Header } from 'react-native-elements'
-import {IconButtonWhite} from '../icon_button_white'
-import {IconButtonBlue} from '../icon_button_blue'
-import {IconButtonCart} from '../icon_button_cart'
+import IconButtonCart from '../icon_button_cart'
+import IconButtonClose from '../icon_button_close'
 
 
-const ItemDetailsHeader = () => {
+const ItemPageHeader = () => {
   
     return (
         <View>
@@ -15,7 +14,7 @@ const ItemDetailsHeader = () => {
                 barStyle={{backgroundColor: 'white', color: '#000'}}
                 // barStyle="light-content" // or directly
                 // containerStyle={{borderWidth: 0, borderColor: 'white'}}
-                leftComponent={<IconButtonWhite />}
+                leftComponent={<IconButtonClose />}
                 // centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
                 rightComponent={<IconButtonCart />}
                 // leftContainerStyle={{alignSelf: 'left'}}
@@ -26,4 +25,6 @@ const ItemDetailsHeader = () => {
 }
 
 
-export default ItemDetailsHeader;
+
+
+export default ItemPageHeader;

@@ -1,22 +1,31 @@
-import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import React, { Component, useState } from 'react'
+import { Text, View, StyleSheet, Pressable} from 'react-native'
 import { Button, Card, Icon, Image } from 'react-native-elements'
 import { SvgUri } from 'react-native-svg';
 
 const IconButtonWhite = (props) => {
-    // const image = props.image; 
-    // const image = props.image;
+    
+    const [Pressed, setPressed] = useState(0);
 
     return (
-        <View style={[styles.container]}>
+        <Pressable 
+          onPress={() => {
+            setTimesPressed();
+          }}
+          style={({ pressed }) => [
+            {
+              backgroundColor: pressed ? 'rgba(147, 147, 147, 0.4)' : 'rgba(227, 226, 226, 0.4)',
+            },
+            styles.container,
+          ]}>
             <Image
-              source={{uri : "https://im2.ezgif.com/tmp/ezgif-2-958a4e03f3.png"}}
+              source={{uri : "https://img.icons8.com/material-outlined/344/grid-2.png"}}
               style={styles.image}
               width={20}
               height={20}
               fill="#777"
             />
-        </View>
+        </Pressable>
     );
     
 }

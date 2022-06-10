@@ -1,15 +1,25 @@
-import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import React, { Component, useState } from 'react'
+import { Text, View, StyleSheet, Pressable } from 'react-native'
 import { Button, Card, Icon, Image, Badge } from 'react-native-elements'
 import { SvgUri } from 'react-native-svg';
 
 const IconButtonCart = () => {
 
+  const [Pressed, setPressed] = useState(0);
+
   return (
-      <>
-        <View style={[styles.container]}>
+        <Pressable 
+          onPress={() => {
+            setPressed();
+          }}
+          style={({ pressed }) => [
+            {
+              backgroundColor: pressed ? 'rgba(42, 89, 189, 0.73)' : 'rgba(42, 89, 189, 0.31)',
+            },
+            styles.container,
+          ]}>
             <Image
-              source={{ uri: "https://im2.ezgif.com/tmp/ezgif-2-0021147349.png" }}
+              source={{ uri: "https://img.icons8.com/ios-glyphs/344/shopping-basket.png" }}
               fill={"rgb(42, 89, 189)"}
               width={18} 
               height={18} 
@@ -21,15 +31,14 @@ const IconButtonCart = () => {
               textStyle={styles.badgeText}
               value="5" 
               status="primary" />
-        </View>
-      </>
+        </Pressable>
     );
     
 }
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: 'rgba(42, 89, 189, 0.31)',
+      // backgroundColor: 'rgba(42, 89, 189, 0.31)',
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 10,
