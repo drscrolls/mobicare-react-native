@@ -5,20 +5,18 @@ import { SvgUri } from 'react-native-svg';
 
 const IconButtonWhite = (props) => {
     // const image = props.image; 
-    const image = props.image;
+    // const image = props.image;
 
     return (
-      <>
         <View style={[styles.container]}>
-            <SvgUri
-              uri={"https://www.svgrepo.com/show/309665/grid.svg"}
+            <Image
+              source={{uri : "https://im2.ezgif.com/tmp/ezgif-2-958a4e03f3.png"}}
               style={styles.image}
               width={20}
               height={20}
               fill="#777"
             />
         </View>
-      </>
     );
     
 }
@@ -26,7 +24,7 @@ const IconButtonWhite = (props) => {
 const styles = StyleSheet.create({
     container: {
       backgroundColor: 'rgba(227, 226, 226, 0.4)',
-      // alignItems: 'left',
+      alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 10,
       width: 37, 
@@ -38,7 +36,7 @@ const styles = StyleSheet.create({
       height: 20, 
       justifyContent: 'center', 
       alignSelf: 'center',
-      resizeMode: 'contain',
+      // resizeMode: 'contain',
     }
   });
   

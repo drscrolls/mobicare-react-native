@@ -8,11 +8,12 @@ const IconButtonCart = () => {
   return (
       <>
         <View style={[styles.container]}>
-            <SvgUri
-              uri={"https://www.svgrepo.com/show/352445/shopping-basket.svg"}
+            <Image
+              source={{ uri: "https://im2.ezgif.com/tmp/ezgif-2-0021147349.png" }}
               fill={"rgb(42, 89, 189)"}
               width={18} 
               height={18} 
+              style={styles.image}
             />
             <Badge 
               containerStyle={styles.badgeContainer} 

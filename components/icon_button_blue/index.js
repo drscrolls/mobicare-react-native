@@ -4,17 +4,17 @@ import { Button, Card, Icon, Image, Badge } from 'react-native-elements'
 import { SvgUri } from 'react-native-svg';
 
 const IconButtonBlue = (props) => {
-    const icon = props.icon ?? "https://www.svgrepo.com/show/352445/shopping-basket.svg";
-    const counter = props.counter ?? true;
+    const icon = props.icon ?? "https://im2.ezgif.com/tmp/ezgif-2-0021147349.png";
 
     return (
       <>
         <View style={[styles.container]}>
-            <SvgUri
-              uri={icon}
+            <Image
+              source={{ uri :icon }}
               fill="rgb(42, 89, 189)"
               width={15}
               height={15}
+              style={styles.image}
             />
         </View>
       </>

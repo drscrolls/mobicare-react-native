@@ -6,23 +6,23 @@ import Category from '../category';
 const categories = [
     {
       title: 'Vitamins',
-      image: "https://www.svgrepo.com/show/418928/medicine-pills-tablets.svg"
+      image: "https://im2.ezgif.com/tmp/ezgif-2-1a442f6709.png"
     },
     {
       title: 'Herbal',
-      image: "https://www.svgrepo.com/show/418927/drugs-medicine-pills.svg"
+      image: "https://im2.ezgif.com/tmp/ezgif-2-9589ef2709.png"
     },
     {
       title: 'Dental',
-      image: "https://www.svgrepo.com/show/418932/dropper-medical-pipette.svg"
+      image: "https://im2.ezgif.com/tmp/ezgif-2-5651dac875.png"
     },
     {
       title: 'Skincare',
-      image: "https://www.svgrepo.com/show/418941/aid-band-bandage.svg"
+      image: "https://im2.ezgif.com/tmp/ezgif-2-8a41db98e8.png"
     },
     {
       title: 'Hair',
-      image: "https://www.svgrepo.com/show/418926/beauty-bottle-box.svg"
+      image: "https://im2.ezgif.com/tmp/ezgif-2-58f4e70fc9.png"
     }
   ];
 
