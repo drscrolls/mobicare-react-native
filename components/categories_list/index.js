@@ -6,7 +6,7 @@ import Category from '../category';
 const categories = [
     {
       title: 'Vitamins',
-      image: "https://img.icons8.com/ios/344/pill.png"
+      image: "https://img.icons8.com/ios/344/hand-with-a-pill.png"
     },
     {
       title: 'Herbal',
