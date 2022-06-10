@@ -21,7 +21,7 @@ const categories = [
       image: "https://www.svgrepo.com/show/418941/aid-band-bandage.svg"
     },
     {
-      title: 'Hairgrowth',
+      title: 'Hair',
       image: "https://www.svgrepo.com/show/418926/beauty-bottle-box.svg"
     }
   ];
