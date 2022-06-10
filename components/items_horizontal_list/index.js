@@ -36,7 +36,8 @@ const ItemsHorizontalList = () => {
             <FlatList 
                 scrollEnabled={false}
                 data={items} 
-                renderItem={(item) => <ItemHorizontal category={item} />}  />
+                renderItem={(item) => <ItemHorizontal category={item} />} 
+                keyExtractor={(item, index) => index}  />
         </View>
     )
 }

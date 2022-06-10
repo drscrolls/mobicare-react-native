@@ -34,7 +34,8 @@ const CategoriesList = (props) => {
             <FlatList 
                 data={categories} 
                 horizontal={true}
-                renderItem={(item) => <Category category={item} />}  />
+                renderItem={(item) => <Category category={item} />} 
+                keyExtractor={(item, index) => index} />
         </View>
     )
 }
