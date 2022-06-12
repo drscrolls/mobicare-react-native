@@ -8,8 +8,8 @@ export default function App() {
   return (
     <SafeAreaProvider style={styles.container}>
       
-      {/* <ItemPageScreen /> */}
-      <HomeScreen />
+      <ItemPageScreen />
+      {/* <HomeScreen /> */}
       <StatusBar />
     </SafeAreaProvider>
   );
