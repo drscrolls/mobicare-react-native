@@ -7,6 +7,7 @@ import ItemDetails from '../../components/item_details';
 import ItemDetailsOrderButtons from '../../components/item_details_order_buttons';
 import StickyHeaderFooterScrollView from 'react-native-sticky-header-footer-scroll-view';
 import CartDetails from '../../components/cart_details';
+import CartFooter from '../../components/cart_footer';
 
 
 const CartScreen = (props) => {
@@ -18,7 +19,7 @@ const CartScreen = (props) => {
         fitToScreen={true}
         additionalHeightReserve={160}
         renderStickyHeader={() => <ItemPageHeader />}
-        renderStickyFooter={() => <ItemDetailsOrderButtons />}
+        renderStickyFooter={() => <CartFooter />}
         showsVerticalScrollIndicator={false}>
 
         <CartDetails />
