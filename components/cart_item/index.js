@@ -18,55 +18,39 @@ const CartItem = ({category}) => {
         <View style={styles.textContainer}>
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.price}>GHS {price}</Text>
+        </View>
 
         <View style={styles.quantityContainer}>
             <WhiteButton 
-              icon="ios-add-outline" 
-              hasOutline={true}
-              iconSize={12}
-              buttonHeight={23}
-              buttonWidth={23}
-              outlineColor={"#f2f2f2"}
-              iconColor={"black"}
-              backgroundColor={"white"}
-              pressedBackgroundColor={"#ededed"}
-              onPressEvent={() => alert("presssed button")}
-              />
-              <Text style={styles.quantityText}>1</Text>
-            <WhiteButton 
               icon="remove" 
-              hasOutline={true}
-              iconSize={12}
-              buttonHeight={23}
-              buttonWidth={23}
-              outlineColor={"#f2f2f2"}
-              iconColor={"black"}
-              backgroundColor={"white"}
-              pressedBackgroundColor={"#ededed"}
+              hasOutline={false}
+              iconSize={16}
+              buttonHeight={29}
+              buttonWidth={29}
+              iconColor={"#5b79c3"}
+              backgroundColor={"#e5f0fe"}
+              pressedBackgroundColor={"#9eb8e1"}
               onPressEvent={() => alert("presssed button")}
             />
               
+              <Text style={styles.quantityText}>1</Text>
+
+            <WhiteButton 
+              icon="ios-add-outline" 
+              iconSize={16}
+              buttonHeight={29}
+              buttonWidth={29}
+              iconColor={"#5b79c3"}
+              backgroundColor={"#e5f0fe"}
+              pressedBackgroundColor={"#9eb8e1"}
+              onPressEvent={() => alert("presssed button")}
+              />
           
          
 
             
         </View>
-        </View>
-        <View style={{ position: 'absolute', right: 6, bottom: 8 }}>
-            <WhiteButton 
-                icon="trash" 
-                hasOutline={false}
-                iconSize={15}
-                buttonHeight={27}
-                buttonWidth={27}
-                outlineColor={"#f2f2f2"}
-                iconColor={"#666"}
-                backgroundColor={"#f2f2f2"}
-                pressedBackgroundColor={"#ddd"}
-                onPressEvent={() => alert("delete button")}
-              />
-          </View>
-           
+        
       </View>
     );
     
@@ -86,10 +70,10 @@ const styles = StyleSheet.create({
       flexDirection: 'column',
       borderWidth: 0,
       paddingRight: 50,
-      flex: 0.85
+      flex: 1
     },
     title :{
-      color: '#555',
+      color: '#444',
       fontSize: 14,
       fontWeight: '600',
       marginLeft: 10,
@@ -109,21 +93,26 @@ const styles = StyleSheet.create({
     quantityContainer :{
       marginLeft: 10,
       marginTop: 5,
-      width: "100%",
+      justifyContent: 'center',
       flexDirection: 'row',
-      position: 'absolute',
-      bottom: 8
+      backgroundColor: '#e5f0fe',
+      padding: 2,
+      borderRadius: 10,
+      alignSelf: 'center'
     },
     quantityText :{
-      marginHorizontal: 15,
-      fontSize: 13,
+      marginHorizontal: 10,
+      fontSize: 14,
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 2
+      textAlign: 'center',
+      marginTop: 4.5,
+      color: "#333",
+      fontWeight: 'normal'
     },
     image: {
-      height: 90,
-      width: 90,
+      height: 80,
+      width: 80,
       borderRadius: 5,
       backgroundColor: '#f9f9f9'
     }
