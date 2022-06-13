@@ -18,8 +18,8 @@ export default function App() {
     <SafeAreaProvider style={styles.container}>
       
       {/* <ItemPageScreen /> */}
-      {/* <HomeScreen /> */}
-      <CartScreen />
+      <HomeScreen />
+      {/* <CartScreen /> */}
       <StatusBar />
     </SafeAreaProvider>
   );
