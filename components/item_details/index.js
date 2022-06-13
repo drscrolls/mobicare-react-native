@@ -8,7 +8,7 @@ const ItemDetails = () => {
     return (
       <>
         <ItemImageCarousel />
-        <View style={styles.container}>
+          <View style={styles.container}>
           <Text style={styles.header}>Enafen Ibuprofen Brufen 400mg</Text>
           <View style={styles.flexContainer}>
             <Text style={styles.price}>GHS 3.00</Text>
