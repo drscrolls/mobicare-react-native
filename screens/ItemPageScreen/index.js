@@ -5,29 +5,30 @@ import HomeHeader from '../../components/home_header';
 import ItemPageHeader from '../../components/itempage_header';
 import ItemDetails from '../../components/item_details';
 import ItemDetailsOrderButtons from '../../components/item_details_order_buttons';
-
+import StickyHeaderFooterScrollView from 'react-native-sticky-header-footer-scroll-view';
 
 
 const ItemPageScreen = (props) => {
 
     return (
-      <ScrollView style={styles.container}
+      <StickyHeaderFooterScrollView style={styles.container}
         alwaysBounceVertical={true}
-        stickyHeaderIndices={[0]}
+        makeScrollable={true}
+        fitToScreen={true}
+        additionalHeightReserve={160}
+        renderStickyHeader={() => <ItemPageHeader />}
+        renderStickyFooter={() => <ItemDetailsOrderButtons />}
         showsVerticalScrollIndicator={false}>
 
-        <ItemPageHeader />
         <ItemDetails />
-        <ItemDetailsOrderButtons />
 
-      </ScrollView>
+      </StickyHeaderFooterScrollView>
     );
 }
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
-    position: 'absolute'
+    width: '100%'
   },
   orderContainer: {
     bottom: 0,

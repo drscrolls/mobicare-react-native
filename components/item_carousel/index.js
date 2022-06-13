@@ -36,7 +36,7 @@ export default class ItemImageCarousel extends Component {
         return (
             <Pagination
               dotsLength={entries.length}
-              tappableDots={true}
+            //   tappableDots={true}
               activeDotIndex={activeSlide}
               containerStyle={{ backgroundColor: 'white' }}
               dotStyle={{

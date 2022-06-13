@@ -86,22 +86,22 @@ const styles = StyleSheet.create({
     },
     blueText: {
       color: '#6086e6',
-      fontWeight: 500
+      fontWeight: '500'
     },
     blackTextSmall: {
       color: '#333',
-      fontWeight: 500,
+      fontWeight: '500',
       fontSize: 13
     },
     blueTextSmall: {
       color: '#6086e6',
-      fontWeight: 500,
+      fontWeight: '500',
       fontSize: 13,
       marginTop: 2
     },
     descriptionText: {
       color: '#444',
-      fontWeight: 400,
+      fontWeight: '400',
       fontSize: 13,
       marginTop: 2
     },
