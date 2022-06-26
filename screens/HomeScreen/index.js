@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Button, TouchableOpacity} from 'react-native';
+import { View, Text,RefreshControl, StyleSheet, ScrollView, Button, TouchableOpacity } from 'react-native';
 import CategoriesList from '../../components/categories_list';
 import HomeHeader from '../../components/home_header';
 import HomeSearch from '../../components/home_search';
@@ -9,38 +9,47 @@ import ItemsHorizontalList from '../../components/items_horizontal_list';
 
 const HomeScreen = ({ navigation, route }) => {
 
-    // React.useLayoutEffect(() => {
-    //   navigation.setOptions({
-    //     headerRight: () => (
-    //       <IconButtonCart onPress={() => alert("Hello")} />
-    //     ),
-    //   });
-    // }, [navigation]);
 
+  const wait = (timeout) => {
+    return new Promise(resolve => setTimeout(resolve, timeout));
+  }
 
-    return (
-      <View style={styles.container}>
-        <ScrollView
-          alwaysBounceVertical={true}
-          // stickyHeaderIndices={[0]}
-          showsVerticalScrollIndicator={false}
-          >
-              {/* <HomeHeader /> */}
-              {/* <Button onPress={()=> {
+  const [refreshing, setRefreshing] = React.useState(false);
+
+  const onRefresh = React.useCallback(() => {
+    setRefreshing(true);
+    wait(2000).then(() => setRefreshing(false));
+  }, []);
+
+  return (
+    <View style={styles.container}>
+      <ScrollView
+        alwaysBounceVertical={true}
+        // stickyHeaderIndices={[0]}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+          />
+        }
+        showsVerticalScrollIndicator={false}
+      >
+        {/* <HomeHeader /> */}
+        {/* <Button onPress={()=> {
                     navigation.push("Cart");
                   }
                 } title="Test" /> */}
-              <HomeSearch />
-              <CategoriesList />
-              <ImageBanner />
-              <View>
-                <ItemsHorizontalList navigation={navigation} />
-              </View>
+        <HomeSearch />
+        <CategoriesList />
+        <ImageBanner />
+        <View>
+          <ItemsHorizontalList navigation={navigation} />
+        </View>
 
-        </ScrollView>
-            
-      </View>
-    );
+      </ScrollView>
+
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
