@@ -3,10 +3,20 @@ import { View, Text, StyleSheet, ScrollView, Button, TouchableOpacity} from 'rea
 import CategoriesList from '../../components/categories_list';
 import HomeHeader from '../../components/home_header';
 import HomeSearch from '../../components/home_search';
+import IconButtonCart from '../../components/icon_button_cart';
 import ImageBanner from '../../components/image_banner';
 import ItemsHorizontalList from '../../components/items_horizontal_list';
 
 const HomeScreen = ({ navigation, route }) => {
+
+    // React.useLayoutEffect(() => {
+    //   navigation.setOptions({
+    //     headerRight: () => (
+    //       <IconButtonCart onPress={() => alert("Hello")} />
+    //     ),
+    //   });
+    // }, [navigation]);
+
 
     return (
       <View style={styles.container}>

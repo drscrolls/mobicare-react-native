@@ -3,14 +3,13 @@ import { Text, View, StyleSheet, Pressable } from 'react-native'
 import { Button, Card, Icon, Image, Badge } from 'react-native-elements'
 import { SvgUri } from 'react-native-svg';
 
-const IconButtonCart = () => {
+const IconButtonCart = ({navigation}) => {
 
-  const [Pressed, setPressed] = useState(0);
 
   return (
         <Pressable 
           onPress={() => {
-            setPressed();
+            navigation.push("Cart");
           }}
           style={({ pressed }) => [
             {
