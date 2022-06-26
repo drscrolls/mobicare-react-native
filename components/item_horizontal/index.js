@@ -11,7 +11,17 @@ const ItemHorizontal = ({navigation, route, category}) => {
 
     // console.log("image", image);
     return (
-      <Pressable onPress={() => {navigation.push("Item")}}>
+      <Pressable 
+        onPress={() => {navigation.push("Item")}}
+        style={({ pressed }) => [
+          {
+            backgroundColor: pressed
+              ? '#ededed'
+              : 'white'
+          },
+          styles.wrapperCustom
+        ]}
+        >
         <View style={styles.container}>
         <Image 
           source={{uri : image }}
@@ -31,13 +41,17 @@ const ItemHorizontal = ({navigation, route, category}) => {
 }
 
 const styles = StyleSheet.create({
+    wrapperCustom: {
+      height: 70,
+      marginBottom: 10,
+      borderRadius: 5
+    },
     container: {
       justifyContent: 'flex-start',
       flexDirection: 'row',
-      marginBottom: 10,
       display: 'flex',
       flex: 1,
-      width: '100%'
+      width: '100%',
     },
     textContainer: {
       flexDirection: 'column',
@@ -63,8 +77,8 @@ const styles = StyleSheet.create({
       bottom: 5
     },
     image: {
-      height: 70,
-      width: 70,
+      height: "100%",
+      width: 80,
       borderRadius: 5,
       backgroundColor: '#f9f9f9'
     }
