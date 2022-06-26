@@ -36,8 +36,6 @@ const CartDetails = () => {
     return (
       <>
         <View style={styles.container}>
-          <Text style={styles.header}>Cart</Text>
-
           <View style={styles.normalContainer}>
               <FlatList 
                 scrollEnabled={false}

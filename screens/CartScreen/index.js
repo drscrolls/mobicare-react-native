@@ -10,27 +10,26 @@ import CartDetails from '../../components/cart_details';
 import CartFooter from '../../components/cart_footer';
 
 
-const CartScreen = (props) => {
+const CartScreen = ({navigation}) => {
 
     return (
-      <StickyHeaderFooterScrollView style={styles.container}
+      <ScrollView style={styles.container}
         alwaysBounceVertical={true}
         makeScrollable={true}
-        fitToScreen={true}
-        additionalHeightReserve={160}
-        renderStickyHeader={() => <ItemPageHeader />}
-        renderStickyFooter={() => <CartFooter />}
+        stickyHeaderIndices={[2]}
+        invertStickyHeaders={true}
         showsVerticalScrollIndicator={false}>
 
         <CartDetails />
-
-      </StickyHeaderFooterScrollView>
+        <CartFooter />
+      </ScrollView>
     );
 }
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%'
+    width: '100%',
+    backgroundColor: '#fff'
   },
   orderContainer: {
     bottom: 0,

@@ -1,29 +1,80 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
 import { StyleSheet, Text, View } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import HomeScreen from './screens/HomeScreen';
-import ItemPageScreen from './screens/ItemPageScreen';
-import * as Sentry from 'sentry-expo';
-import CartScreen from './screens/CartScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './screens/HomeScreen'
+import CartScreen from './screens/CartScreen'
+import ItemPageScreen from './screens/ItemPageScreen'
 
-Sentry.init({
-  dsn: 'https://658874c30f0e49c0a9868ee54fef031c@o1286227.ingest.sentry.io/6499317',
-  enableInExpoDevelopment: true,
-  debug: true, // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
-});
+const Stack = createStackNavigator();
+
+const AppNavigator = () => {
+  return (
+      <Stack.Navigator 
+        id="MainNavigation" 
+        initialRouteName="Home"
+        screenOptions={{
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#621FF7',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle :{
+            fontWeight: 'bold',
+          },
+        }}>
+        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home' }} />
+        <Stack.Screen name="Cart" component={CartScreen} options={{ title: 'Cart' }}/>
+        <Stack.Screen name="Item" component={ItemPageScreen} options={{ title: 'Item' }}/>
+      </Stack.Navigator>
+  );
+}
+
+function NavStack() {
+  return (
+     <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#fff',
+          },
+          headerTintColor: '#000',
+          headerTitleStyle :{
+            fontWeight: '400',
+          },
+        }}
+      >
+      <Stack.Screen 
+        name="Home" 
+        component={HomeScreen} 
+        options={{ title: 'Home' }}
+      />
+      <Stack.Screen 
+        name="Cart" 
+        component={CartScreen} 
+        options={{ title: 'Cart' }}
+      />
+      <Stack.Screen 
+       name="Item" 
+       component={ItemPageScreen} 
+       options={{ title: 'Item' }}
+      />
+    </Stack.Navigator>
+  );
+}
+
 
 
 export default function App() {
   return (
-    <SafeAreaProvider style={styles.container}>
-      
-      {/* <ItemPageScreen /> */}
-      <HomeScreen />
-      {/* <CartScreen /> */}
-      <StatusBar />
-    </SafeAreaProvider>
+    <NavigationContainer>
+        <NavStack />
+    </NavigationContainer>
   );
 }
+
+console.disableYellowBox = true;
 
 const styles = StyleSheet.create({
   container: {

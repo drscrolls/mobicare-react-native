@@ -28,7 +28,7 @@ const items = [
     
   ];
 
-const ItemsHorizontalList = () => {
+const ItemsHorizontalList = ({ navigation, route }) => {
   
     return (
         <View style={styles.container}>
@@ -36,7 +36,7 @@ const ItemsHorizontalList = () => {
             <FlatList 
                 scrollEnabled={false}
                 data={items} 
-                renderItem={(item) => <ItemHorizontal category={item} />} 
+                renderItem={(item) => <ItemHorizontal category={item} navigation={navigation} route={route} />} 
                 keyExtractor={(item, index) => index}  />
         </View>
     )

@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, Pressable } from 'react-native'
 import { Button, Card, Icon, Image } from 'react-native-elements'
 import CategoryIcon from '../category_icon';
 import IconButtonBlue from '../icon_button_blue';
 
-const ItemHorizontal = ({category}) => {
+const ItemHorizontal = ({navigation, route, category}) => {
 
     const {title, price} = category.item;
     const image = category.item.image ;
 
     // console.log("image", image);
     return (
-      <View style={styles.container}>
+      <Pressable onPress={() => {navigation.push("Item")}}>
+        <View style={styles.container}>
         <Image 
           source={{uri : image }}
           containerStyle={styles.image} />
@@ -23,6 +24,8 @@ const ItemHorizontal = ({category}) => {
           <IconButtonBlue />
         </View>
       </View>
+      </Pressable>
+      
     );
     
 }
